@@ -18,6 +18,18 @@ label{
   font-weight: normal;
   color:#00b3b4;
 }
+select{
+  border: solid 3px #ccc;
+  border-radius: 10px;
+}
+#submit{
+  background: #ccc;
+  color: #00b3b4;
+  border: solid 2px #ccc;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
 .answer{
   display: none;
   text-align: center;
