@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   $('#submit').click(function(event){
-    $('.answer').show();
-    //$('.answer').hide();
+    //$('.answer').show();
+    $('.answer').hide();
 
     //Assigns point values from inputs into 4 categorical scores, organized into 4 variables.
     var frontBackScore = parseInt($('#frontVsBack1').val()) + parseInt($('#frontVsBack2').val()) + parseInt($('input[name=frontVsBack3]:checked').val());
@@ -15,28 +15,27 @@ $(document).ready(function(){
     //visWrit:  - is vis, + is Writ
     //cJava: - is C#, + is Java
     console.log(frontBackScore, bigSmallScore, visWritScore, cJavaScore)
+
     if(frontBackScore>0){//user prefers back end (Java/Ruby/C#)
       if(bigSmallScore>0){//user prefers smaller companies (Ruby)
-        $('#ruby').show();
+        $('#ruby').show().slideUp('fast');
       }
       else{//user prefers bigger companies (Java/C#)
         if(cJavaScore>0){//user prefers Java
-          $('#java').show();
+          $('#java').show().slideUp('fast');
         }
         else{//user prefers C#
-          $('#csharp').show();
+          $('#csharp').show().slideUp('fast');
         }
       }
     }else{//user prefers front end (PHP/CSS)
       if(visWritScore>0){//user prefers written content(PHP)
-        $('#php').show();
+        $('#php').slideDown('2000');
       }
       else{//user prefers visual content(CSS)
-        $('#css').show();
+        $('#css').slideUp('fast').show();
       }
     }
-
     event.preventDefault();
-
   });
 });

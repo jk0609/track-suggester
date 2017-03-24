@@ -1,14 +1,35 @@
+body{
+  background: white;
+  padding-bottom: 50px;
+}
 #wrapperDiv{
   width: 90%;
   margin: auto;
+  font-family: 'Open Sans';
+}
+.jumbotron{
+  text-align: center;
+  color: white;
+  background: #ccc;
 }
 label{
   margin-top: 15px;
+  font-size: 16px;
+  font-weight: normal;
+  color:#00b3b4;
 }
-
 .answer{
   display: none;
   text-align: center;
+  color:#00b3b4;
+  background: #ccc;
+  padding: 10px 30px 30px 20px;
+  border-radius: 20px;
+  width: 100%;
+}
+.answer h3{
+  font-weight: bold;
+  color: white;
 }
 .answer img{
   height: 150px;
@@ -18,4 +39,5 @@ label{
 }
 .answer p{
   text-align: left;
+  font-size: 16px;
 }
